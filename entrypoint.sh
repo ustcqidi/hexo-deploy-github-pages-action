@@ -52,25 +52,22 @@ npx hexo generate
 
 cd $TARGET_PUBLISH_DIR
 
-echo ">>> Publish git ..."
-npx hexo deploy
-
-# echo ">>> Config git ..."
+echo ">>> Config git ..."
 
 # Configures Git.
-# git init
-# git config user.name "${GITHUB_ACTOR}"
-# git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-# git remote add origin "${REPOSITORY_PATH}"
+git init
+git config user.name "${GITHUB_ACTOR}"
+git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+git remote add origin "${REPOSITORY_PATH}"
 
-# git checkout --orphan $TARGET_BRANCH
+git checkout --orphan $TARGET_BRANCH
 
-# git add .
+git add .
 
-# echo '>>> Start Commit ...'
-# git commit --allow-empty -m "Building and deploying Hexo project from Github Action"
+echo '>>> Start Commit ...'
+git commit --allow-empty -m "Building and deploying Hexo project from Github Action"
 
-# echo '>>> Start Push ...'
-# git push -u origin "${TARGET_BRANCH}" --force
+echo '>>> Start Push ...'
+git push -u origin "${TARGET_BRANCH}" --force
 
 echo ">>> Deployment successful!"
