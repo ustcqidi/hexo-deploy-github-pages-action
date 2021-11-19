@@ -49,11 +49,6 @@ npm install
 echo ">>> Clean folder ..."
 npx hexo clean
 
-echo ">>> install themes ..."
-rm -rf themes
-mkdir themes
-git clone https://github.com/iissnan/hexo-theme-next themes/next
-
 echo ">>> Generate file ..."
 npx hexo generate
 
