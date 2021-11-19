@@ -30,6 +30,8 @@ fi
 
 REPOSITORY_PATH="https://x-access-token:${PERSONAL_TOKEN}@github.com/${TARGET_REPOSITORY}.git"
 
+echo ">>>>> Start push to ${REPOSITORY_PATH} <<<<<"
+
 # deploy to
 echo ">>>>> Start deploy to ${TARGET_REPOSITORY} <<<<<"
 
