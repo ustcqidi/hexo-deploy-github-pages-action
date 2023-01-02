@@ -58,6 +58,9 @@ echo ">>> Config git ..."
 
 # Configures Git.
 git init
+echo ">>> Config git init done..."
+
+git config --global --add safe.directory $(realpath .)
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git remote add origin "${REPOSITORY_PATH}"
